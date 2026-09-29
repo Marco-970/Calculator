@@ -13,6 +13,9 @@ namespace Calculator.Enums
         Multiplication,
         Division,
         Square,
-        Power
+        Power,
+        Sine,
+        Cosine,
+        Tan
     }
 }

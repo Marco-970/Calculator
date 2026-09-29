@@ -9,5 +9,6 @@ namespace Calculator
     public class MathLogic
     {
         public double Add(double x, double y) => x + y;
+        public double Subtract(double x, double y) => x - y;
     }
 }

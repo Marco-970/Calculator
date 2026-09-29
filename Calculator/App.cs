@@ -11,9 +11,11 @@ namespace Calculator
     internal class App
     {
         IUserInteractor _userInteractor;
-        public App(IUserInteractor userInteractor)
+        MathLogic _mathLogic;
+        public App(IUserInteractor userInteractor, MathLogic mathLogic)
         {
             _userInteractor = userInteractor;
+            _mathLogic = mathLogic;
         }
 
         public void Run()

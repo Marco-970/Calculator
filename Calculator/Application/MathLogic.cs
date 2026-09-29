@@ -14,5 +14,8 @@ namespace Calculator.Application
         public double Divide(double x, double y) => x / y;
         public double SquareRoot(double x) => Math.Sqrt(x);
         public double Power(double x, double y) => Math.Pow(x, y);
+        public double Sine(double x) => Math.Sin(x);
+        public double Cosine(double x) => Math.Cos(x);
+        public double Tan(double x) => Math.Tan(x);
     }
 }

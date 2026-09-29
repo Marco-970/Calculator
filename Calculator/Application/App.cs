@@ -55,6 +55,19 @@ namespace Calculator.Application
                     (double number, double power) pow = _userInteractor.PromptUserForPower();
                     _userInteractor.DisplayMessage($"{pow.number} pow {pow.power} = {_mathLogic.Power(pow.number, pow.power)}");
                     break;
+                case "Sine":
+                    double sinNumber = _userInteractor.PromptUserForNumber();
+                    _userInteractor.DisplayMessage($"Sine of {sinNumber} = {_mathLogic.Sine(sinNumber)}");
+                    break;
+                case "Cosine":
+                    double cosineNumber = _userInteractor.PromptUserForNumber();
+                    _userInteractor.DisplayMessage($"Cosine of {cosineNumber} = {_mathLogic.Cosine(cosineNumber)}");
+                    break;
+                case "Tan":
+                    double tanNumber = _userInteractor.PromptUserForNumber();
+                    _userInteractor.DisplayMessage($"Tan of {tanNumber} = {_mathLogic.Tan(tanNumber)}");
+                    break;
+
             }
         }
     }

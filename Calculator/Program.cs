@@ -9,5 +9,6 @@ internal class Program
         App app = new App(_userInteractor, new MathLogic());
 
         app.Run();
+        _userInteractor.Quit();
     }
 }

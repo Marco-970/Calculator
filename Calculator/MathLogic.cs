@@ -12,5 +12,6 @@ namespace Calculator
         public double Subtract(double x, double y) => x - y;
         public double Multiply(double x, double y) => x * y;
         public double Divide(double x, double y) => x / y;
+        public double SquareRoot(double x) => Math.Sqrt(x);
     }
 }

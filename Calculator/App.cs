@@ -24,7 +24,7 @@ namespace Calculator
             double x = double.Parse(_userInteractor.GetUserInput());
             _userInteractor.DisplayMessage("Enter the second number, leave blank if there is none:");
             double y = double.Parse(_userInteractor.GetUserInput());
-            _userInteractor.DisplayMessage("Select from the menu what you'd like to do. Write the name or the symbol:\n");
+            _userInteractor.DisplayMessage("Select from the menu what you'd like to do. Write the name or the symbol if there is one:\n");
             foreach(var option in Enum.GetNames(typeof(MenuOptions)))
             {
                 _userInteractor.DisplayMessage(option);
@@ -46,6 +46,9 @@ namespace Calculator
                 case "Division":
                 case "/":
                     _userInteractor.DisplayMessage($"{x} / {y} = {_mathLogic.Divide(x, y)}");
+                    break;
+                case "Square":
+                    _userInteractor.DisplayMessage($"√{x} = {_mathLogic.SquareRoot(x)}");
                     break;
             }
         }

@@ -12,6 +12,7 @@ namespace Calculator.Enums
         Subtraction,
         Multiplication,
         Division,
-        Square
+        Square,
+        Power
     }
 }

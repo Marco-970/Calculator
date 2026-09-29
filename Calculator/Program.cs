@@ -6,10 +6,17 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        ICalculatorUserInteractor _userInteractor = new CalculatorConsoleUserInteractor((new ConsoleUserInteractor()));
-        App app = new App(_userInteractor, new MathLogic());
+        ConsoleUserInteractor _consoleUserInteractor = new ConsoleUserInteractor();
+        ICalculatorUserInteractor _userInteractor = new CalculatorConsoleUserInteractor((_consoleUserInteractor));
+        App _app = new App(_userInteractor, new MathLogic());
 
-        app.Run();
+        bool _keepCalculating = true;
+        while (_keepCalculating)
+        {
+            _app.Run();
+            _keepCalculating = _userInteractor.PromptUserForAnotherCalculation();
+            _consoleUserInteractor.Clear();
+        }
         _userInteractor.Quit();
     }
 }

@@ -47,5 +47,11 @@ namespace Calculator
         public void Clear() => _console.Clear();
 
         public void Quit() => _console.Quit();
+
+        public bool PromptUserForAnotherCalculation()
+        {
+            Console.WriteLine("Do you want to calculate some more? Y/N");
+            return _console.GetUserInput().ToUpper() == "Y" ? true : false;
+        }
     }
 }

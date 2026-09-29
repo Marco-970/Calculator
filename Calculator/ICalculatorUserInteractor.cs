@@ -12,5 +12,6 @@ namespace Calculator
         public (double number, double power) PromptUserForPower();
         public (double x, double y) PromptUserForNumbers();
         public double PromptUserForNumber();
+        public bool PromptUserForAnotherCalculation();
     }
 }

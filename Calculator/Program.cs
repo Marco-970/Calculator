@@ -1,10 +1,14 @@
-﻿namespace Calculator
+﻿using Tools;
+namespace Calculator;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        IUserInteractor _userInteractor = new ConsoleUserInteractor();
+        App app = new App(_userInteractor, new MathLogic());
+
+        app.Run();
+        _userInteractor.Quit();
     }
 }

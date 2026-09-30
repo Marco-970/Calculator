@@ -13,5 +13,7 @@ namespace Calculator
         public (double x, double y) PromptUserForNumbers();
         public double PromptUserForNumber();
         public bool PromptUserForAnotherCalculation();
+        public void DisplayPastCalculations(int calculationsAmount);
+        public void DisplayMenu();
     }
 }

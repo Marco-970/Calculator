@@ -16,6 +16,7 @@ namespace Calculator.Enums
         Power,
         Sine,
         Cosine,
-        Tan
+        Tan,
+        Past
     }
 }

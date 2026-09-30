@@ -11,6 +11,12 @@ namespace Calculator.Enums
         Addition,
         Subtraction,
         Multiplication,
-        Division
+        Division,
+        Square,
+        Power,
+        Sine,
+        Cosine,
+        Tan,
+        Past
     }
 }

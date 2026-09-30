@@ -13,17 +13,19 @@ internal class Program
         App _app = new App(_userInteractor, new MathLogic());
 
         bool _keepCalculating = true;
+        _calculationsFileManager.Read();
+        int sessionStart = CalculationsRepository.Calculations.Count;
+
         while (_keepCalculating)
         {
-            _calculationsFileManager.Read();
-            int sessionStart = CalculationsRepository.Calculations.Count;
             _uses++;
             _consoleUserInteractor.DisplayMessage($"Calculations this session: {_uses}");
             _app.Run();
             _keepCalculating = _userInteractor.PromptUserForAnotherCalculation();
             _consoleUserInteractor.Clear();
-            _calculationsFileManager.Write(sessionStart);
         }
+        _calculationsFileManager.Write(sessionStart);
+
         _userInteractor.Quit();
     }
 }
